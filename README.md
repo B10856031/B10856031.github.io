@@ -1,5 +1,5 @@
 # B10856031.github.io
-<!DOCTYPE html>
+
 <html>
 
 <head>

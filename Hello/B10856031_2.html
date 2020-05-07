@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B10856031_2</title>
+
+    <style>
+        td {
+            border: 1px red;
+            border-style: dotted;
+        }
+        
+        .a1 {
+            font-size: 150%;
+        }
+        
+        .a2 {
+            font-size: 200%;
+            font-weight: bold;
+        }
+        
+        .a3 {
+            font-size: 250%;
+            font-weight: bold;
+        }
+        
+        table {
+            text-align: center;
+        }
+    </style>
+
+    <script language="javascript">
+        var apple, orange, strawberry;
+        apple = prompt("請輸入蘋果的匯率");
+        orange = prompt("請輸入橘子的匯率");
+        strawberry = prompt("請輸入草莓的匯率");
+
+        function RorG(x) {
+            if (x >= 100) {
+                return 'red';
+            } else {
+                return 'green';
+            }
+        }
+        document.write(
+            '<center>' +
+            '<table>' +
+            '<p style="font-size: 150%;">' +
+            '匯率換算表' +
+            '</p>' +
+            '<tr>' +
+            '<td class="a1">物品</td>' +
+            '<td class="a1">原價</td>' +
+            '<td class="a1">換算匯率</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td class="a2">Apple</td>' +
+            '<td class="a2">10</td>' +
+            '<td class="a3" style="color: ' + RorG(apple * 10) + ';">' + apple * 10 + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td class="a2">Orange</td>' +
+            '<td class="a2">20</td>' +
+            '<td class="a3" style="color: ' + RorG(orange * 20) + ';">' + orange * 20 + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td class="a2">Strawberry</td>' +
+            '<td class="a2">150</td>' +
+            '<td class="a3" style="color: ' + RorG(strawberry * 150) + ';">' + strawberry * 150 + '</td>' +
+            '</tr>' +
+            '</table>' +
+            '</center>'
+        )
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+
+</html>

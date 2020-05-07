@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B10856031</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        
+        table {
+            border: 1px;
+            border-style: dashed;
+        }
+    </style>
+    <script language="javascript">
+        var x, y;
+        document.write("<center>");
+        document.write("<table>");
+        document.write("<h1>九九乘法表</h1>");
+        for (x = 1; x <= 10; x++) {
+            document.write("<tr>");
+            for (y = 1; y <= 10; y++) {
+                if (x == 1 && y == 1) {
+                    document.write("<td>");
+                    document.write("");
+                    document.write("</td>");
+                } else if (x == 1 && y != 1) {
+                    document.write("<td  align='center' style=\"border:1px green dotted;\"><font color=\"green\">");
+                    document.write((y - 1));
+                    document.write("</font></td>");
+                } else {
+                    if (y == 1) {
+                        document.write("<td  align='center' style=\"border:1px green dotted;\"><font color=\"green\">");
+                        document.write((x - 1));
+                        document.write("</font></td>");
+                    } else {
+                        document.write("<td  align='center' style=\"border:1px red dotted;\"><font color=\"red\">");
+                        document.write((x - 1) + "*" + (y - 1) + "=" + ((x - 1) * (y - 1)));
+                        document.write("</font></td>");
+                    }
+                }
+                document.write("<td>");
+                document.write("");
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        document.write("</center>");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

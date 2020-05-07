@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Write</title>
+
+    <style>
+        h1 {
+            font-size: 36px;
+            font-weight: bolder;
+            color: blue;
+            text-align: left;
+        }
+    </style>
+
+    <script>
+        var score;
+
+        score = parseInt(prompt("請輸入你的成績："));
+
+        switch (true) {
+            case (score < 60):
+                document.write("<h1>不及格，請待加強!");
+                break;
+            case (score < 70):
+                document.write("<h1>及格，但有進步空間!");
+                break;
+            case (score < 80):
+                document.write("<h1>及格，程度達到標準!");
+                break;
+            case (score < 90):
+                document.write("<h1>及格，接近完美!");
+                break;
+            default:
+                document.write("<h1>及格，超強，好好保持!");
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

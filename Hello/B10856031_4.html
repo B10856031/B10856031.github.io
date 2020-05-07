@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B10856031_4</title>
+
+    <script language="javascript">
+        var name, codeNum, num, i, birthPlace, gender, times = 0;
+        var city = ['臺北市', '臺中市', '基隆市', '臺南市', '高雄市', '臺北縣', '宜蘭縣', '桃園縣', '嘉義市', '新竹縣', '苗栗縣', '臺中縣', '南投縣', '彰化縣', '新竹市', '雲林縣', '嘉義縣', '臺南縣', '高雄縣', '屏東縣', '花蓮縣', '臺東縣', '金門縣', '澎湖縣', '陽明山', '連江縣'];
+        name = prompt("請輸入您的姓名");
+        num = prompt("請輸入您的身分證字號");
+        codeNum = num.charCodeAt(0);
+
+        for (i = 65; i <= 90; i++) {
+            if (i == codeNum) {
+                birthPlace = city[times];
+            }
+            times++;
+        }
+
+        if (num.slice(1, 2) == 1) {
+            gender = '男性';
+        } else {
+            gender = '女性';
+        }
+        document.write(
+            '您的姓名：' + name + "<br>" +
+            '您的出生地是：' + birthPlace + "<br>" +
+            '您的性別是：' + gender + "<br>"
+        );
+    </script>
+
+</head>
+
+
+
+<body>
+
+</body>
+
+</html>

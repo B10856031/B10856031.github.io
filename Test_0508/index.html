@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲牛點餐價格表</title>
+    <style>
+        h1 {
+            font-weight: bolder;
+            color: blue;
+            text-align: center;
+        }
+        
+        h2 {
+            color: red;
+            text-align: center;
+        }
+        
+        table {
+            margin: auto;
+            border: 1px;
+            border-style: dashed;
+        }
+        
+        td {
+            border-style: dotted;
+            border-width: 1px;
+            padding: 10px;
+            border-color: red;
+            text-align: center
+        }
+        
+        .td_noBorder {
+            border-width: 0px;
+        }
+        
+        .content {
+            color: green;
+            font-family: Arial;
+            font-size: 18px;
+        }
+        
+        .redcontent {
+            color: red;
+            font-family: Arial;
+            font-size: 18px;
+        }
+        
+        #tableTitle {
+            font-weight: bolder;
+            font-size: 18px;
+            border-color: purple;
+            color: purple;
+            text-align: center
+        }
+    </style>
+    <script>
+        /*我的檔案github和數位平台上面都有哦~*/
+        /*(我怕github位置放錯@@)*/
+        var x, y, a;
+        document.write("<h1>澳洲牛點餐價格表</h1>");
+        document.write("<h2>折扣內容：滿300的倍數打8折</h2>");
+        document.write("<table>");
+        for (y = 0; y <= 7; y++) {
+            document.write("<tr>");
+            for (x = 0, a = 0; a <= 5; x += 50, a++) {
+                if (y == 0 && x == 0) { //最左上那格
+                    document.write("<td class='td_noBorder'>");
+                    document.write("</td>");
+                } else if (y == 0 && x != 5) { //第一排2~6格
+                    document.write("<td id='tableTitle'>");
+                    document.write('套餐' + a + '<br>' + x + '元');
+                    document.write("</td>");
+                } else {
+                    if (x == 0) { //第2~8排第一格
+                        document.write("<td id='tableTitle'>");
+                        document.write(y);
+                        document.write("</td>");
+                    } else { //中間綠字&打折的部分
+                        if ((x * y) % 300 == 0) {
+                            document.write("<td class='redcontent'>");
+                            document.write('原價：' + x * y + '<br>' + x * y * 0.8);
+                            document.write("</td>");
+                        } else {
+                            document.write("<td class='content'>");
+                            document.write(x * y);
+                            document.write("</td>");
+                        }
+                    }
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+* {
+    /*消除網頁邊框*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.about {
+    background-color: #333;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.item-group {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.bg img {
+    /*最上方圖片*/
+    width: 100%;
+}
+
+.logo {
+    text-align-last: center;
+}
+
+.title h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.title p {
+    font-size: 22px;
+    text-align: center;
+}
+
+.item {
+    margin: 0 10px 20px;
+}
+
+.item .text h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.item .pic img {
+    /*設置全圖片*/
+    width: 100%;
+}
+
+.item .pic {
+    align-self: center;
+}
+
+.two {
+    padding: 15px 0 0 0;
+}
+
+.header {
+    height: 50px;
+    background-color: #000;
+    position: relative;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    display: block;
+    /*規定元素以方塊方式呈現*/
+    position: absolute;
+    /*相對於他的父完素進行絕對定位*/
+    top: 5px;
+    right: 10px;
+}
+
+.btn span {
+    opacity: 0;
+    /*區塊內透明*/
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+    /*自動隱藏超出的文字or圖片*/
+}
+
+.btn::before {
+    /*在原本的元素[之前]加入內容*/
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 2px;
+    width: 36px;
+    background-color: #aaa;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 10px 0px #aaa, 0px 5px 0px #aaa, 0px -5px 0px #aaa, 0px -10px 0px #aaa;
+    /*影子*/
+}
+
+nav {
+    width: 30%;
+    height: 100vh;
+    /*view height式螢幕可視範圍高度的百分比*/
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+}
+
+nav a {
+    /*設置裡面的超連結*/
+    display: block;
+    /*link變直排*/
+    text-decoration: none;
+    color: #a6e22e;
+    padding: 10px 20px;
+    border-bottom: 1px solid #a6e22e;
+    background-color: black;
+}
+
+#menu {
+    position: absolute;
+    /*讓最上方的checkbox隱藏*/
+}
+
+#menu:checked~.header nav {
+    left: 0;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+@media only screen and (min-width:600px) {
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /*設定桌面及平板顯示*/
+    .logo {
+        margin: 0 0 0 10px;
+    }
+    .item-group {
+        display: flex;
+        /*彈性盒子，又稱flexbox*/
+    }
+    .two .item {
+        display: flex;
+    }
+    .two .item .text {
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+    /*設定桌面及平板顯示*/
+    .btn {
+        display: none;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        /*分散對齊*/
+        align-items: center;
+    }
+    nav {
+        position: relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        background-color: transparent;
+        /*透明顏色*/
+    }
+    nav a {
+        border-bottom: none;
+    }
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    .pictures {
+        background-color: black;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+footer {
+    text-align: center;
+}
+
+.pictures img {
+    width: 100%;
+}

@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.logo {
+    margin: 0 0 0 10px;
+}
+
 .about {
     background-color: #333;
 }
@@ -25,10 +29,6 @@ img {
 .bg img {
     /*最上方圖片*/
     width: 100%;
-}
-
-.logo {
-    text-align-last: center;
 }
 
 .title h2 {
@@ -66,7 +66,12 @@ img {
 .header {
     height: 50px;
     background-color: #000;
-    position: relative;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /*分散對齊*/
+    align-items: center;
+    /* position: relative; */
 }
 
 .btn {
@@ -121,9 +126,9 @@ nav a {
     display: block;
     /*link變直排*/
     text-decoration: none;
-    color: #a6e22e;
+    color: red;
     padding: 10px 20px;
-    border-bottom: 1px solid #a6e22e;
+    border-bottom: 1px solid red;
     background-color: black;
 }
 
@@ -142,7 +147,55 @@ nav a {
     width: 100%;
 }
 
+@media only screen and (max-width:599px) {
+    .col-ss-0 {
+        width: 0%;
+    }
+    .col-ss-1 {
+        width: 8.33%;
+    }
+    .col-ss-2 {
+        width: 16.66%;
+    }
+    .col-ss-3 {
+        width: 25%;
+    }
+    .col-ss-4 {
+        width: 33.33%;
+    }
+    .col-ss-5 {
+        width: 41.66%;
+    }
+    .col-ss-6 {
+        width: 50%;
+    }
+    .col-ss-7 {
+        width: 58.33%;
+    }
+    .col-ss-8 {
+        width: 66.66%;
+    }
+    .col-ss-9 {
+        width: 75%;
+    }
+    .col-ss-10 {
+        width: 83.33%;
+    }
+    .col-ss-11 {
+        width: 91.66%;
+    }
+    .col-ss-12 {
+        width: 100%;
+    }
+    .pictures figcaption {
+        font-size: 13px;
+    }
+}
+
 @media only screen and (min-width:600px) {
+    .col-s-0 {
+        width: 0%;
+    }
     .col-s-1 {
         width: 8.33%;
     }
@@ -179,16 +232,13 @@ nav a {
     .col-s-12 {
         width: 100%;
     }
-    footer {
-        text-align: center;
+    .pictures figcaption {
+        font-size: 18px;
     }
 }
 
 @media only screen and (min-width: 768px) {
     /*設定桌面及平板顯示*/
-    .logo {
-        margin: 0 0 0 10px;
-    }
     .item-group {
         display: flex;
         /*彈性盒子，又稱flexbox*/
@@ -202,15 +252,8 @@ nav a {
         box-sizing: border-box;
         flex-direction: column;
     }
-    /*設定桌面及平板顯示*/
     .btn {
         display: none;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        /*分散對齊*/
-        align-items: center;
     }
     nav {
         position: relative;
@@ -224,6 +267,9 @@ nav a {
     }
     nav a {
         border-bottom: none;
+    }
+    .col-0 {
+        width: 0%;
     }
     .col-1 {
         width: 8.33%;
@@ -261,18 +307,41 @@ nav a {
     .col-12 {
         width: 100%;
     }
-    .pictures {
-        background-color: black;
-    }
-    footer {
-        text-align: center;
+    .pictures figcaption {
+        font-size: 20px;
     }
 }
 
-footer {
+.two .text {
+    padding-top: 25px;
+    align-self: center;
+}
+
+#footer {
+    background-color: black;
+    padding: 5px 0;
     text-align: center;
+    font-size: 12px;
+}
+
+.pictures img {
+    width: auto;
+}
+
+.pictures figcaption {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0 0 0;
 }
 
 .pictures img {
     width: 100%;
+}
+
+.newline {
+    padding: 0;
+}
+
+.blankHeader {
+    margin: 10px;
 }

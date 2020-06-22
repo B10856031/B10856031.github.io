@@ -6,14 +6,11 @@
     color: white;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: DFKai-sb;
 }
 
 .logo {
     margin: 0 0 0 10px;
-}
-
-.about {
-    background-color: #333;
 }
 
 img {
@@ -23,7 +20,7 @@ img {
 .item-group {
     width: 100%;
     max-width: 1400px;
-    margin: auto;
+    margin: 0;
 }
 
 .bg img {
@@ -31,26 +28,17 @@ img {
     width: 100%;
 }
 
-.title h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-.title p {
-    font-size: 22px;
-    text-align: center;
-}
-
 .item {
-    margin: 0 10px 20px;
+    margin: 0 0px 10px;
 }
 
-.item .text h3 {
+.text h3 {
     font-size: 24px;
     text-align: center;
+    font-weight: normal;
 }
 
-.item .pic img {
+.pic img {
     /*設置全圖片*/
     width: 100%;
 }
@@ -59,11 +47,8 @@ img {
     align-self: center;
 }
 
-.two {
-    padding: 15px 0 0 0;
-}
-
 .header {
+    z-index: 9999;
     height: 50px;
     background-color: #000;
     position: fixed;
@@ -126,6 +111,7 @@ nav a {
     display: block;
     /*link變直排*/
     text-decoration: none;
+    text-align: center;
     color: red;
     padding: 10px 20px;
     border-bottom: 1px solid red;
@@ -153,6 +139,9 @@ nav a {
     }
     .col-ss-1 {
         width: 8.33%;
+    }
+    .col-ss-1_5 {
+        width: 12.5%;
     }
     .col-ss-2 {
         width: 16.66%;
@@ -188,7 +177,14 @@ nav a {
         width: 100%;
     }
     .pictures figcaption {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    .title h2 {
+        font-size: 20px;
+    }
+    .title p,
+    .title h3 {
+        font-size: 15px;
     }
 }
 
@@ -198,6 +194,9 @@ nav a {
     }
     .col-s-1 {
         width: 8.33%;
+    }
+    .col-s-1_5 {
+        width: 12.5%;
     }
     .col-s-2 {
         width: 16.66%;
@@ -233,12 +232,29 @@ nav a {
         width: 100%;
     }
     .pictures figcaption {
+        font-size: 15px;
+    }
+    .title h2 {
+        font-size: 25px;
+    }
+    .title p,
+    .title h3 {
         font-size: 18px;
     }
 }
 
 @media only screen and (min-width: 768px) {
     /*設定桌面及平板顯示*/
+    .pictures figcaption {
+        font-size: 18px;
+    }
+    .title h2 {
+        font-size: 30px;
+    }
+    .title p,
+    .title h3 {
+        font-size: 19px;
+    }
     .item-group {
         display: flex;
         /*彈性盒子，又稱flexbox*/
@@ -274,6 +290,9 @@ nav a {
     .col-1 {
         width: 8.33%;
     }
+    .col-1_5 {
+        width: 12.5%;
+    }
     .col-2 {
         width: 16.66%;
     }
@@ -307,9 +326,6 @@ nav a {
     .col-12 {
         width: 100%;
     }
-    .pictures figcaption {
-        font-size: 20px;
-    }
 }
 
 .two .text {
@@ -324,14 +340,18 @@ nav a {
     font-size: 12px;
 }
 
+.pictures {
+    margin: 0;
+    padding: 0;
+}
+
 .pictures img {
-    width: auto;
+    width: 100%;
 }
 
 .pictures figcaption {
     text-align: center;
     font-weight: bold;
-    padding: 5px 0 0 0;
 }
 
 .pictures img {
@@ -340,8 +360,26 @@ nav a {
 
 .newline {
     padding: 0;
+    margin: 0;
 }
 
 .blankHeader {
     padding: 25px;
+}
+
+.title p {
+    padding: 0 20px;
+    text-align: left !important;
+    align-self: center !important;
+}
+
+.title h2 {
+    text-align: center;
+}
+
+marquee {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }

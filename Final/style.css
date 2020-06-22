@@ -44,6 +44,7 @@ img {
 }
 
 .item .pic {
+    margin: 15px;
     align-self: center;
 }
 

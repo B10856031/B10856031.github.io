@@ -1,0 +1,10 @@
+.boxItem {
+    display: inline-block;
+    width: 150px;
+    height: 10rem;
+    /* border: 1px solid black; */
+}
+
+.blankBlock {
+    height: 1.75rem;
+}
